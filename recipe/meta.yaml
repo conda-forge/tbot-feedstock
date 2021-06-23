@@ -1,5 +1,5 @@
 {% set name = "tbot" %}
-{% set version = "0.8.2" %}
+{% set version = "0.9.1" %}
 
 
 package:
@@ -8,8 +8,8 @@ package:
 
 source:
   url: https://github.com/Rahix/tbot/archive/v{{ version }}.tar.gz
-  sha256: 2eb7c4a62f37cf5ab61ecff76eca8832d571e49cf76bf234926fff6afc8d907f
-  
+  sha256: 822c959227204934b4c572ccbdc3bd20ddd1bb1cec8b7a1635e7ce85a6734a05
+
 build:
   number: 0
   noarch: python
@@ -30,12 +30,12 @@ test:
     - tbot.tc
     - tbot_contrib
     - tbot_contrib.connector
-    - tbot_contrib.swupdate 
+    - tbot_contrib.swupdate
     - tbot_contrib.timing
 
 about:
   home: https://github.com/Rahix/tbot
-  summary: Automation/Testing tool for Embedded Linux Development 
+  summary: Automation/Testing tool for Embedded Linux Development
   license: GPL-2.0-or-later
   license_file: LICENSE.txt
 
