@@ -11,20 +11,22 @@ source:
   sha256: 2eb7c4a62f37cf5ab61ecff76eca8832d571e49cf76bf234926fff6afc8d907f
   
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
-    - python
+    - python >={{ python_min }}
     - paramiko
     - termcolor2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - tbot
     - tbot.tc
